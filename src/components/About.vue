@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="pb-24">
+  <div class="pb-10">
 
     <!-- Title -->
     <div class="px-4 pt-6">

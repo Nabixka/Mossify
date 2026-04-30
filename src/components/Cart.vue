@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="px-4 pt-6 pb-28 flex flex-col gap-4">
+  <div class="px-4 pt-6 pb-35 flex flex-col gap-4">
 
     <!-- Title -->
     <h1 class="font-serif text-2xl text-green-950 font-bold">Keranjang</h1>
@@ -18,7 +18,7 @@
     </div>
 
     <!-- List Item -->
-    <div class="flex flex-col gap-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
       <!-- Item -->
       <div class="bg-white rounded-2xl p-3 flex gap-3 shadow-sm">
@@ -111,7 +111,7 @@
     </div>
 
     <!-- Action -->
-    <div class="fixed bottom-0 left-0 w-full bg-white border-t p-4 flex flex-col gap-2">
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t p-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
 
       <button class="rounded-xl font-semibold bg-green-950 text-white py-3 hover:bg-green-800 transition">
         Checkout

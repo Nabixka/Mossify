@@ -21,7 +21,7 @@ const navItems = [
     <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-sm">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <div class="flex items-center gap-3">
-          <button @click="isShow = !isShow" class="rounded-full border border-slate-200 bg-slate-50/80 p-2 text-slate-600 transition hover:bg-slate-100">
+          <button @click="isShow = !isShow" class="lg:hidden rounded-full border border-slate-200 bg-slate-50/80 p-2 text-slate-600 transition hover:bg-slate-100">
             <Icon icon="ci:hamburger-lg" width="26" height="26" />
           </button>
           <div>

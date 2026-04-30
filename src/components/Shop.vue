@@ -11,7 +11,7 @@
     <h3 class="text-gray-500">Temukan kokedama favoritmu di sini</h3>
 
     <!-- Grid -->
-    <div class="grid grid-cols-2 gap-4 pt-8">
+    <div class="grid lg:grid-cols-5 grid-cols-2 gap-4 pt-8">
       
       <!-- Card -->
       <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
