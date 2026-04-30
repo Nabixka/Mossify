@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col gap-1 pl-5 pt-10 pr-5">
+    <div class="flex flex-col gap-1 pl-5 pt-10 pr-5 pb-20">
         <h1 class="font-serif text-3xl text-green-950 font-bold">Shop</h1>
         <h3 class="font-semibold text-mist-500">Temukan kokedama favoritmu di sini</h3>
 
@@ -51,7 +51,7 @@
         <!--  -->
         <div class="bg-gray-200 w-full rounded-lg p-3 mt-5 flex flex-col gap-3">
             <h3 class="font-serif flex items-center gap-3 font-bold text-green-800 text-xl">
-                <Icon icon="meteor-icons:leaf" width="24" height="24"  style="color: #233d1d" />
+                <Icon icon="meteor-icons:leaf" width="24" height="24" style="color: #233d1d"/>
                 Custom Kokedama
             </h3>
             <h4 class="text-sm">Buat Kokedama sesuai keinginanmu!<br>Pilih tanaman, ukuran, dan gaya sendiri</h4>
