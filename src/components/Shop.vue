@@ -8,12 +8,12 @@
       {
         "nama" : "Kokedama Sirih Gading",
         "harga" : 35000,
-        "image" : "/src/assets/kokedama.jpg"
+        "image" : "/kokedama.jpg"
       },
       {
         "nama" : "Kokedama Lidah Kodok",
         "harga" : 50000,
-        "image" : "/src/assets/kokedama.jpg"
+        "image" : "/kokedama.jpg"
       }
     ])
 
