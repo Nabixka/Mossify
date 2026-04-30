@@ -4,16 +4,51 @@ import Shop from './components/Shop.vue'
 import Cart from './components/Cart.vue'
 import About from './components/About.vue'
 import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
 
 const isShow = ref(false)
 const handleSection = ref('home')
+const cart = ref([])
 
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'shop', label: 'Shop' },
   { id: 'about', label: 'About' },
 ]
+
+const addToCart = (item) => {
+  const existingItem = cart.value.find(c => c.nama === item.nama)
+  if (existingItem) {
+    existingItem.qty += 1
+  } else {
+    cart.value.push({
+      ...item,
+      qty: 1
+    })
+  }
+}
+
+const removeFromCart = (index) => {
+  cart.value.splice(index, 1)
+}
+
+const clearCart = () => {
+  cart.value = []
+}
+
+const updateQty = (index, qty) => {
+  if (qty <= 0) {
+    removeFromCart(index)
+  } else {
+    cart.value[index].qty = qty
+  }
+}
+
+const goToShop = () => {
+  handleSection.value = 'shop'
+}
+
+provide('cart', { cart, addToCart, removeFromCart, clearCart, updateQty, goToShop })
 </script>
 
 <template>
@@ -42,7 +77,7 @@ const navItems = [
 
         <button @click="handleSection = 'cart'" class="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800">
           <Icon icon="mdi:cart" width="20" height="20" />
-          Keranjang
+          Keranjang {{ cart.length > 0 ? `(${cart.length})` : '' }}
         </button>
       </div>
 
