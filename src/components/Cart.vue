@@ -3,89 +3,125 @@
 </script>
 
 <template>
-    <div class="pl-2 pr-2 flex flex-col gap-3">
+  <div class="px-4 pt-6 pb-28 flex flex-col gap-4">
 
-        <!-- Title -->
-        <h1 class="font-serif text-2xl text-green-950 font-bold">Keranjang</h1>
+    <!-- Title -->
+    <h1 class="font-serif text-2xl text-green-950 font-bold">Keranjang</h1>
 
-        <!-- Opsi -->
-        <div class="flex justify-between">
-            <h5 class="text-sm">3 Produk</h5>
-            <h5 class="flex text-sm gap-3">Hapus Semua <Icon icon="tabler:trash" width="20" height="20" /></h5>
-        </div>
+    <!-- Opsi -->
+    <div class="flex justify-between items-center">
+      <h5 class="text-sm text-gray-500">3 Produk</h5>
+      <button class="flex items-center gap-2 text-sm text-red-500 hover:text-red-600">
+        Hapus Semua 
+        <Icon icon="tabler:trash" width="18" height="18" />
+      </button>
+    </div>
 
-        <!-- List -->
-        <div class="grid grid-cols-1">
+    <!-- List Item -->
+    <div class="flex flex-col gap-4">
 
-            <div class="p-1 rounded-lg bg-white/80 flex gap-2 items-center">
+      <!-- Item -->
+      <div class="bg-white rounded-2xl p-3 flex gap-3 shadow-sm">
 
-                <!-- Gambar -->
-                <img src="/src/assets/kokedama.jpg" class="w-30 h-35 rounded-lg">
+        <!-- Gambar -->
+        <img src="/src/assets/kokedama.jpg" 
+             class="w-24 h-24 object-cover rounded-xl">
 
-                <!-- Detail -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-md">Kokedama Sirih Gading</h3>
-                    <h3>Rp85.000</h3>
+        <!-- Detail -->
+        <div class="flex flex-col justify-between w-full">
 
-                    <div class="border border-gray-400 rounded-lg flex w-30">
-                        <button class="border-r border-gray-200 py-1 px-2"><Icon icon="lucide:minus" width="24" height="24" /></button>
-                        <input type="text" class="w-full text-center" placeholder="1">
-                        <button class="border-l border-gray-200 px-2"><Icon icon="ic:twotone-plus" width="24" height="24" /></button>
-                    </div>
-                </div>
-            </div>
+          <div>
+            <h3 class="text-sm font-medium text-gray-800">
+              Kokedama Sirih Gading
+            </h3>
+            <h3 class="text-green-900 font-bold text-sm mt-1">
+              Rp85.000
+            </h3>
+          </div>
+
+          <!-- Quantity -->
+          <div class="flex items-center justify-between mt-2">
             
-            <div class="p-1 rounded-lg bg-white/80 flex gap-2 items-center">
+            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+              <button class="px-2 py-1 hover:bg-gray-100">
+                <Icon icon="lucide:minus" width="16" height="16" />
+              </button>
 
-                <!-- Gambar -->
-                <img src="/src/assets/kokedama.jpg" class="w-30 h-35 rounded-lg">
+              <input type="text" value="1" class="w-10 text-center text-sm outline-none">
 
-                <!-- Detail -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-md">Kokedama Sirih Gading</h3>
-                    <h3>Rp85.000</h3>
-
-                    <div class="border border-gray-400 rounded-lg flex w-30">
-                        <button class="border-r border-gray-200 py-1 px-2"><Icon icon="lucide:minus" width="24" height="24" /></button>
-                        <input type="text" class="w-full text-center" placeholder="1">
-                        <button class="border-l border-gray-200 px-2"><Icon icon="ic:twotone-plus" width="24" height="24" /></button>
-                    </div>
-                </div>
+              <button class="px-2 py-1 hover:bg-gray-100">
+                <Icon icon="ic:twotone-plus" width="16" height="16" />
+              </button>
             </div>
 
-            <div class="p-1 rounded-lg bg-white/80 flex gap-2 items-center">
+            <!-- Optional delete per item -->
+            <button class="text-gray-400 hover:text-red-500">
+              <Icon icon="mdi:trash-outline" width="18" height="18" />
+            </button>
 
-                <!-- Gambar -->
-                <img src="/src/assets/kokedama.jpg" class="w-30 h-35 rounded-lg">
-
-                <!-- Detail -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-md">Kokedama Sirih Gading</h3>
-                    <h3>Rp85.000</h3>
-
-                    <div class="border border-gray-400 rounded-lg flex w-30">
-                        <button class="border-r border-gray-200 py-1 px-2"><Icon icon="lucide:minus" width="24" height="24" /></button>
-                        <input type="text" class="w-full text-center" placeholder="1">
-                        <button class="border-l border-gray-200 px-2"><Icon icon="ic:twotone-plus" width="24" height="24" /></button>
-                    </div>
-                </div>
-        
-            </div>
-
-            <!-- Ringkasan -->
-            <div class="rounded-lg border border-gray-400 p-3 mt-5 mb-5">
-                <h2 class="font-serif text-green-950">Ringkasan Belanja</h2>
-                <h3 class="flex justify-between text-sm border-b pb-3 border-gray-300">Subtotal (3 Produk) <p>Rp265.000</p></h3>
-                <div class="flex justify-between">
-                    <h2>Total</h2>
-                    <h2>Rp265.000</h2>
-                </div>
-            </div>
-
-            <button class="mb-5 rounded-lg font-semibold bg-green-950 text-white py-2">Checkout</button>
-            <button class="border border-green-950 text-green-950 font-semibold rounded-lg py-2">Lanjut Belanja</button>
+          </div>
 
         </div>
+      </div>
+
+      <!-- Copy item (biar konsisten) -->
+      <div class="bg-white rounded-2xl p-3 flex gap-3 shadow-sm">
+        <img src="/src/assets/kokedama.jpg" class="w-24 h-24 object-cover rounded-xl">
+        <div class="flex flex-col justify-between w-full">
+          <div>
+            <h3 class="text-sm font-medium text-gray-800">Kokedama Sirih Gading</h3>
+            <h3 class="text-green-900 font-bold text-sm mt-1">Rp85.000</h3>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+              <button class="px-2 py-1 hover:bg-gray-100">
+                <Icon icon="lucide:minus" width="16" height="16" />
+              </button>
+              <input type="text" value="1" class="w-10 text-center text-sm outline-none">
+              <button class="px-2 py-1 hover:bg-gray-100">
+                <Icon icon="ic:twotone-plus" width="16" height="16" />
+              </button>
+            </div>
+            <button class="text-gray-400 hover:text-red-500">
+              <Icon icon="mdi:trash-outline" width="18" height="18" />
+            </button>
+          </div>
+        </div>
+      </div>
 
     </div>
+
+    <!-- Ringkasan -->
+    <div class="bg-white rounded-2xl p-4 shadow-sm mt-4 flex flex-col gap-3">
+
+      <h2 class="font-serif text-green-950 font-bold">
+        Ringkasan Belanja
+      </h2>
+
+      <div class="flex justify-between text-sm text-gray-600 border-b pb-2">
+        <span>Subtotal (3 Produk)</span>
+        <span>Rp265.000</span>
+      </div>
+
+      <div class="flex justify-between font-bold text-green-900">
+        <span>Total</span>
+        <span>Rp265.000</span>
+      </div>
+
+    </div>
+
+    <!-- Action -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t p-4 flex flex-col gap-2">
+
+      <button class="rounded-xl font-semibold bg-green-950 text-white py-3 hover:bg-green-800 transition">
+        Checkout
+      </button>
+
+      <button class="border border-green-950 text-green-950 font-semibold rounded-xl py-3 hover:bg-green-50 transition">
+        Lanjut Belanja
+      </button>
+
+    </div>
+
+  </div>
 </template>
