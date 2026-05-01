@@ -22,7 +22,7 @@
       },
       {
         "nama" : "Kokedama Lili Paris",
-        "harga" : 40000,
+        "harga" : 30000,
         "image" : "/lili_paris.png"
       }
     ])
