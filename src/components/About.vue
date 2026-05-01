@@ -31,10 +31,7 @@
       </div>
 
       <!-- Image -->
-      <img 
-        src="/src/assets/kokedama.jpg" 
-        class="w-28 h-32 object-cover rounded-xl"
-      >
+      <img src="/sirih_gading.png" class="w-28 h-32 object-cover bg-gray-200 rounded-xl" >
     </div>
 
     <!-- Keunggulan -->

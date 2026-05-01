@@ -4,11 +4,26 @@ import Shop from './components/Shop.vue'
 import Cart from './components/Cart.vue'
 import About from './components/About.vue'
 import { Icon } from '@iconify/vue'
-import { ref, provide } from 'vue'
+import { ref, provide, onMounted, watch } from 'vue'
 
 const isShow = ref(false)
 const handleSection = ref('home')
 const cart = ref([])
+
+onMounted(() => {
+  const savedCart = localStorage.getItem('mossify_cart')
+  if (savedCart) {
+    try {
+      cart.value = JSON.parse(savedCart)
+    } catch (error) {
+      console.error('Error loading cart from localStorage:', error)
+    }
+  }
+})
+
+watch(cart, (newCart) => {
+  localStorage.setItem('mossify_cart', JSON.stringify(newCart))
+}, { deep: true })
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -77,7 +92,8 @@ provide('cart', { cart, addToCart, removeFromCart, clearCart, updateQty, goToSho
 
         <button @click="handleSection = 'cart'" class="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800">
           <Icon icon="mdi:cart" width="20" height="20" />
-          Keranjang {{ cart.length > 0 ? `(${cart.length})` : '' }}
+          <h3 class="hidden lg:block">Keranjang</h3>
+          {{ cart.length > 0 ? `(${cart.length})` : '' }}
         </button>
       </div>
 

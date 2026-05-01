@@ -6,16 +6,21 @@
 
     const item = ref([
       {
-        "nama" : "Kokedama Sirih Gading",
-        "harga" : 35000,
-        "image" : "/kokedama.jpg"
-      },
-      {
-        "nama" : "Kokedama Lidah Kodok",
+        "nama" : "Kokedama Lidah Mertua",
         "harga" : 50000,
-        "image" : "/kokedama.jpg"
-      }
+        "image" : "/lidah_mertua.png"
+      },
+      // {
+      //   "nama" : "Kokedama Sirih Gading",
+      //   "harga" : 50000,
+      //   "image" : "/sirih_gading.png"
+      // }
     ])
+
+  const goToWA = () => {
+    const pesan = encodeURIComponent('Halo Saya Te')
+    window.open('https://wa.me/6289618324030?text', '_blank')
+  }
 
 </script>
 
@@ -26,11 +31,13 @@
     <h3 class="text-gray-500">Temukan kokedama favoritmu di sini</h3>
 
     <!-- Grid -->
-    <div class="grid lg:grid-cols-5 grid-cols-2 gap-4 pt-8">
+    <div class="flex flex-wrap w-full justify-center lg:justify-start gap-4 pt-8">
       
       <!-- Card -->
-      <div v-for="i in item" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-        <img :src="i.image" class="h-40 w-full object-cover">
+      <div v-for="i in item" class="bg-whiterounded-2xl lg:w-1/3 w-full shadow-sm hover:shadow-md transition duration-300">
+        <div class="flex justify-center bg-gray-200">
+          <img :src="i.image" class="bg-gray-200 h-60 w-1/2 object-cover object-center">
+        </div>
 
         <div class="p-3">
           <h4 class="text-sm font-medium text-gray-800">{{ i.nama }}</h4>
@@ -45,7 +52,7 @@
     </div>
 
     <!-- Custom Section -->
-    <div class="bg-gradient-to-r from-green-100 to-green-200 w-full rounded-2xl p-4 mt-8 flex flex-col gap-3 shadow-sm">
+    <!-- <div class="bg-gradient-to-r from-green-100 to-green-200 w-full rounded-2xl p-4 mt-8 flex flex-col gap-3 shadow-sm">
       <h3 class="font-serif flex items-center gap-2 font-bold text-green-900 text-lg">
         <Icon icon="meteor-icons:leaf" width="22" height="22"/>
         Custom Kokedama
@@ -55,10 +62,10 @@
         Buat Kokedama sesuai keinginanmu! Pilih tanaman, ukuran, dan gaya sendiri.
       </p>
 
-      <button class="flex items-center justify-center gap-2 bg-green-900 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-800 transition w-full">
+      <button @click="goToWA" class="flex items-center justify-center gap-2 bg-green-900 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-800 transition w-full">
         Pesan Sekarang 
         <Icon icon="maki:arrow" width="14" height="14" />
       </button>
-    </div>
+    </div> -->
   </div>
 </template>
