@@ -10,11 +10,21 @@
         "harga" : 50000,
         "image" : "/lidah_mertua.png"
       },
-      // {
-      //   "nama" : "Kokedama Sirih Gading",
-      //   "harga" : 50000,
-      //   "image" : "/sirih_gading.png"
-      // }
+      {
+        "nama" : "Kokedama Sirih Gading Hijau/Lemon",
+        "harga" : 30000,
+        "image" : "/sirih_gading.png"
+      },
+      {
+        "nama" : "Kokedama Sirih Gading Variegata",
+        "harga" : 40000,
+        "image" : "/sirih_gading_variegeta.png"
+      },
+      {
+        "nama" : "Kokedama Lili Paris",
+        "harga" : 40000,
+        "image" : "/lili_paris.png"
+      }
     ])
 
   const goToWA = () => {
@@ -31,10 +41,10 @@
     <h3 class="text-gray-500">Temukan kokedama favoritmu di sini</h3>
 
     <!-- Grid -->
-    <div class="flex flex-wrap w-full justify-center lg:justify-start gap-4 pt-8">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 pt-8">
       
       <!-- Card -->
-      <div v-for="i in item" class="bg-whiterounded-2xl lg:w-1/3 w-full shadow-sm hover:shadow-md transition duration-300">
+      <div v-for="i in item" class="bg-whiterounded-2xl lg:w-full w-full shadow-sm hover:shadow-md transition duration-300">
         <div class="flex justify-center bg-gray-200">
           <img :src="i.image" class="bg-gray-200 h-60 w-1/2 object-cover object-center">
         </div>

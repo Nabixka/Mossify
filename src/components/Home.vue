@@ -5,12 +5,12 @@ import { inject, ref } from 'vue'
 const { addToCart, goToShop } = inject('cart')
 
 const featuredItems = ref([
-//   {
-//     nama: 'Kokedama Sirih Gading',
-//     harga: 50000,
-//     deskripsi: 'Tanaman hijau elegan yang mudah dirawat dan cocok untuk dekorasi rumah.',
-//     image: '/sirih_gading.png'
-//   }
+    {
+      nama: 'Kokedama Sirih Gading Hijau/Lemon',
+      harga: 30000,
+      deskripsi: 'Tanaman hijau elegan yang mudah dirawat dan cocok untuk dekorasi rumah.',
+      image: '/sirih_gading.png'
+    },
 //   {
 //     nama: 'Custom Kokedama',
 //     harga: 75000,
@@ -51,7 +51,7 @@ const formatRp = (value) => {
 
       <!-- Decorative Image -->
       <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-        <img src="/kokedama_home.png" class="w-72 md:w-96 object-contain" />
+        <img src="/lili_paris.png" class="w-72 md:w-96 object-contain" />
     </div>
     </section>
 
@@ -149,7 +149,7 @@ const formatRp = (value) => {
         <div class="bg-white rounded-2xl p-6 shadow-lg">
           <div class="w-full h-100 overflow-hidden rounded-xl">
             <img 
-              src="/kokedama_home.png"
+              src="/lili_paris.png"
               class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300"
             />
           </div>
