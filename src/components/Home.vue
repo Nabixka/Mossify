@@ -11,15 +11,15 @@ const featuredItems = ref([
       deskripsi: 'Tanaman hijau elegan yang mudah dirawat dan cocok untuk dekorasi rumah.',
       image: '/sirih_gading.png'
     },
-//   {
-//     nama: 'Custom Kokedama',
-//     harga: 75000,
-//     deskripsi: 'Pesan sesuai model favoritmu dengan kombinasi tanaman dan warna akar sendiri.',
-//     custom: true,
-//   }
+    {
+      nama: 'Kokedama Lili Paris',
+      harga: 30000,
+      deskripsi: 'Tanaman cantik dengan bunga putih yang harum, sempurna untuk mempercantik ruangan dengan sentuhan alami.',
+      image: '/lili_paris.png'
+    },
     {
       nama: 'Kokedama Lidah Mertua',
-      harga: 50000,
+      harga: 70000,
       deskripsi: 'Tanaman yang dapat membersihkan udara dan memberikan sentuhan hijau yang segar di rumahmu.',
       image: '/lidah_mertua.png'
     }
@@ -60,7 +60,7 @@ const formatRp = (value) => {
       <h2 class="font-serif text-4xl font-bold text-green-950 mb-2">Produk Unggulan</h2>
       <p class="text-gray-600 mb-8">Pilihan terbaik kokedama kami</p>
 
-      <div class="grid grid-cols-1 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div 
           v-for="item in featuredItems" 
           :key="item.nama"
