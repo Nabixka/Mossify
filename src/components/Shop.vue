@@ -7,7 +7,7 @@
     const item = ref([
       {
         "nama" : "Kokedama Lidah Mertua",
-        "harga" : 70000,
+        "harga" : 75000,
         "image" : "/lidah_mertua.png"
       },
       {
@@ -26,11 +26,6 @@
         "image" : "/lili_paris.png"
       }
     ])
-
-  const goToWA = () => {
-    const pesan = encodeURIComponent('Halo Saya Te')
-    window.open('https://wa.me/6289618324030?text', '_blank')
-  }
 
   const formatRp = (value) => {
     return new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)

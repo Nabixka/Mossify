@@ -30,7 +30,7 @@
       message += `*Total Harga: Rp${formatRp(totalHarga.value)}*%0A`
       message += `*Total Item: ${totalItems.value}*`
 
-      const phoneNumber = '6289618324030' 
+      const phoneNumber = '6287885002596' 
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
       
       window.open(whatsappUrl, '_blank')

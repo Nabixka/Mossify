@@ -19,7 +19,7 @@ const featuredItems = ref([
     },
     {
       nama: 'Kokedama Lidah Mertua',
-      harga: 70000,
+      harga: 75000,
       deskripsi: 'Tanaman yang dapat membersihkan udara dan memberikan sentuhan hijau yang segar di rumahmu.',
       image: '/lidah_mertua.png'
     }
