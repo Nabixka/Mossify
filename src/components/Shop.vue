@@ -24,6 +24,11 @@
         "nama" : "Kokedama Lili Paris",
         "harga" : 30000,
         "image" : "/lili_paris.png"
+      },
+      {
+        "nama" : "Kokedama Palem",
+        "harga" : 80000,
+        "image" : "/Palem.png"
       }
     ])
 
